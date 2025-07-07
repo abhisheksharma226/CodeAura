@@ -37,21 +37,21 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold tracking-tight">
-              DSA<span className="text-blue-600">Tracker</span>
+              TrackMy<span className="text-blue-600">DSA</span>
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">
                 Home
               </Link>
-              <Link href="/dashboard" className="text-sm font-medium hover:text-blue-600 transition-colors">
+              {/* <Link href="/dashboard" className="text-sm font-medium hover:text-blue-600 transition-colors">
                 Dashboard
               </Link>
               <Link href="/u/demo" className="text-sm font-medium hover:text-blue-600 transition-colors">
                 Profile
-              </Link>
-              <Link href="/notes" className="text-sm font-medium hover:text-blue-600 transition-colors">
-                Notes
+              </Link> */}
+              <Link href="/documentation" className="text-sm font-medium hover:text-blue-600 transition-colors">
+                Documentation
               </Link>
             </div>
 
@@ -309,7 +309,7 @@ export default function HomePage() {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Code2 className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">DSATracker</span>
+                <span className="text-xl font-bold">TrackMyDsa</span>
               </div>
               <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
                 The professional way to track your Data Structures and Algorithms journey. Build your portfolio and
@@ -366,7 +366,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2024 DSA Tracker. All rights reserved.</p>
+            <p>&copy; 2024 Track My Dsa. All rights reserved.</p>
           </div>
         </div>
       </footer>

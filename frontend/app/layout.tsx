@@ -18,9 +18,12 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "CodeTrackr - Track your grind. Show your skills. Get hired.",
+  title: "TrackMyDsa - Track your grind. Show your skills. Get hired.",
   description: "A gamified dashboard for developers to track, annotate, and share their DSA journey.",
-    generator: 'v0.dev'
+    generator: 'Abhishek Sharma',
+    icons: {
+      icon: '/favicon.ico',
+    },
 }
 
 export default function RootLayout({

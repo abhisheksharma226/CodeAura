@@ -32,7 +32,7 @@ export function Navbar() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
               <Code2 className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-semibold text-gray-900 dark:text-gray-100">DSATracker</span>
+            <span className="text-xl font-semibold text-gray-900 dark:text-gray-100">TrackMyDsa</span>
           </Link>
 
           {/* Desktop Navigation */}
