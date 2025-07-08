@@ -16,6 +16,7 @@ import {
   BookOpen,
   Brain,
   Zap,
+  User,
 } from "lucide-react"
 import Link from "next/link"
 import { AnimatedCounter } from "@/components/animated-counter"
@@ -89,14 +90,15 @@ export default function HomePage() {
                 </Badge>
 
                 <h1 className="text-5xl lg:text-7xl font-light tracking-tight leading-none">
-                  <span className="font-serif italic">Track.</span> <span className="font-serif italic">Learn.</span>{" "}
-                  <span className="font-serif italic text-blue-600">Grow.</span>
+                  <span className="font-serif italic">Code.</span> <span className="font-serif italic">Conquer.</span>{" "}
+                  <span className="font-serif italic text-blue-600">Climb.</span>
                 </h1>
 
+
                 <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-                  Master data structures and algorithms with intelligent tracking, comprehensive notes, and AI-powered
-                  insights.
+                Track your code. Sharpen your skills. Crack every challenge — with guided DSA prep, real-time insights, and progress that actually matters.
                 </p>
+
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -109,13 +111,13 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
-                <Link href="/dashboard">
+                <Link href="/u/demo">
                   <Button
                     variant="outline"
                     size="lg"
                     className="px-8 py-4 text-base font-medium border-2 bg-transparent"
                   >
-                    Explore Dashboard
+                    Demo Public Profile
                   </Button>
                 </Link>
                 <Link href="https://github.com" target="_blank">
@@ -127,15 +129,26 @@ export default function HomePage() {
               </div>
 
               {/* Platform Logos */}
-              <div className="pt-8">
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Sync with your favorite platforms</p>
-                <div className="flex items-center space-x-8 opacity-60">
-                  <div className="text-sm font-medium">LeetCode</div>
-                  <div className="text-sm font-medium">GeeksforGeeks</div>
-                  <div className="text-sm font-medium">Codeforces</div>
-                  <div className="text-sm font-medium">HackerRank</div>
+              <div className="pt-10">
+                <p className="text-base font-semibold text-gray-800 dark:text-gray-200 mb-4 uppercase tracking-wider">
+                  Seamless Integration with Top Coding Platforms
+                </p>
+                <div className="flex flex-wrap items-center gap-6 text-sm font-semibold">
+                  <span className="px-3 py-1 rounded-md bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-200 shadow-sm">
+                    LeetCode
+                  </span>
+                  <span className="px-3 py-1 rounded-md bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-200 shadow-sm">
+                    GeeksforGeeks
+                  </span>
+                  <span className="px-3 py-1 rounded-md bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-200 shadow-sm">
+                    Codeforces
+                  </span>
+                  <span className="px-3 py-1 rounded-md bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 shadow-sm">
+                    HackerRank
+                  </span>
                 </div>
               </div>
+
             </div>
 
             {/* Right Content - Chart */}
@@ -198,7 +211,7 @@ export default function HomePage() {
               </div>
             </Card>
 
-            {/* AI Explainer */}
+            {/* AI Explainer
             <Card className="p-8 border-0 bg-white dark:bg-gray-900 hover:shadow-lg transition-all duration-300 group">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Brain className="w-6 h-6 text-purple-600 dark:text-purple-400" />
@@ -211,7 +224,23 @@ export default function HomePage() {
                 <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
                 Powered by AI
               </div>
+            </Card> */}
+
+            {/* Public Profile */}
+            <Card className="p-8 border-0 bg-white dark:bg-gray-900 hover:shadow-lg transition-all duration-300 group">
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <User className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold mb-3">Sharable Public Profile</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                Showcase your coding journey with a public DSA profile — complete with solved problems, notes, and platform stats.
+              </p>
+              <div className="flex items-center mt-4 text-xs text-gray-500 dark:text-gray-400">
+                <CheckCircle className="w-3 h-3 text-green-500 mr-1" />
+                Share with recruiters & peers
+              </div>
             </Card>
+
 
             {/* Bookmarking */}
             <Card className="p-8 border-0 bg-white dark:bg-gray-900 hover:shadow-lg transition-all duration-300 group">
@@ -243,8 +272,8 @@ export default function HomePage() {
               <span className="text-white font-semibold">A</span>
             </div>
             <div className="text-left">
-              <div className="font-semibold">Alex Chen</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">Software Engineer at Google</div>
+              <div className="font-semibold">Abhishek Sharma</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">Fresher with a Vision to Become an SDE</div>
             </div>
           </div>
         </div>
@@ -320,7 +349,7 @@ export default function HomePage() {
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                <li>
+                {/* <li>
                   <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     Features
                   </Link>
@@ -334,6 +363,16 @@ export default function HomePage() {
                   <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     Demo
                   </Link>
+                </li> */}
+                <li>
+                  <Link href="/documentation" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  TrackMyDsa
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/documentation" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  Documentation
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -342,22 +381,22 @@ export default function HomePage() {
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                 <li>
-                  <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  <Link href="/company" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  <Link href="/company" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     GitHub
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  <Link href="/company" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     Contact
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                  <Link href="/company" className="hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                     Privacy
                   </Link>
                 </li>
@@ -366,7 +405,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-200 dark:border-gray-800 mt-12 pt-8 text-center text-gray-500 dark:text-gray-400">
-            <p>&copy; 2024 Track My Dsa. All rights reserved.</p>
+            <p>&copy; 2025 TrackMyDsa. All rights reserved.</p>
           </div>
         </div>
       </footer>
