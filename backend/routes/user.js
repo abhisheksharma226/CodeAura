@@ -35,7 +35,7 @@ router.post("/signup", async (req, res) => {
       const token = jwt.sign(
         { userId: user._id, email: user.email },
         process.env.JWT_SECRET,
-        { expiresIn: "7d" }
+        { expiresIn: "2hr" }
       );
   
       // Return user info + token
@@ -49,7 +49,7 @@ router.post("/signup", async (req, res) => {
           email: user.email
         }
       });
-      console.log(user);
+      // console.log(user);
   
     } catch (err) {
       res.status(500).json({ message: "Something went wrong", error: err.message });
@@ -81,7 +81,7 @@ router.post("/login", async (req, res) => {
       const token = jwt.sign(
         { userId: user._id, email: user.email },
         process.env.JWT_SECRET,
-        { expiresIn: "7d" }
+        { expiresIn: "2hr" }
       );
   
       res.status(200).json({

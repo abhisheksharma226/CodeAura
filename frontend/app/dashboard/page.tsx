@@ -46,6 +46,8 @@ import { CodeUpload } from "@/components/code-upload"
 import { InterviewPrep } from "@/components/interview-prep"
 import { AIAssistant } from "@/components/ai-assistant"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { useRouter } from "next/navigation"
+import { API_BASE_URL } from "@/lib/backendURL"
 
 const motivationalQuotes = [
   "Every expert was once a beginner 🌱",
@@ -125,6 +127,45 @@ export default function DashboardPage() {
     }, 5000)
     return () => clearInterval(interval)
   }, [])
+
+
+  const router = useRouter()
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const token = localStorage.getItem("token")
+    const email = localStorage.getItem("email")
+
+    if (!token || !email) {
+      localStorage.clear()
+      router.push("/auth")
+      return
+    }
+
+    // ✅ Validate token from backend
+    fetch(`${API_BASE_URL}/validate/token`, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error("Token invalid")
+        }
+        return res.json()
+      })
+      .then((data) => {
+        // Token is valid
+        setLoading(false)
+      })
+      .catch((err) => {
+        // ❌ Token is expired or invalid
+        localStorage.clear()
+        router.push("/auth")
+      })
+  }, [])
+  
 
   const recentActivity = [
     {

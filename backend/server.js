@@ -6,6 +6,7 @@ const connectDB = require("./db/db");
 const cors = require("cors");
 
 const userRoutes = require("./routes/user");
+const validateRoutes = require("./routes/validate");
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(express.json());
 
 //routes
 app.use("/api/users", userRoutes);
+app.use("/api/validate", validateRoutes);
 
 
 app.listen(PORT, () => {
