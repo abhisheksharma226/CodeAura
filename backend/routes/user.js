@@ -49,12 +49,13 @@ router.post("/signup", async (req, res) => {
           email: user.email
         }
       });
+      console.log(user);
   
     } catch (err) {
       res.status(500).json({ message: "Something went wrong", error: err.message });
     }
   });
-  
+
 
 //login route
 router.post("/login", async (req, res) => {

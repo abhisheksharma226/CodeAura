@@ -63,7 +63,7 @@ export default function HomePage() {
               >
                 {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
               </button>
-              <Link href="/login">
+              <Link href="/auth">
                 <Button variant="outline" size="sm" className="font-medium bg-transparent">
                   Sign In
                 </Button>
@@ -102,7 +102,7 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/login">
+                <Link href="/auth">
                   <Button
                     size="lg"
                     className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 px-8 py-4 text-base font-medium"
