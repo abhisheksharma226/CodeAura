@@ -7,6 +7,8 @@ const cors = require("cors");
 
 const userRoutes = require("./routes/user");
 const validateRoutes = require("./routes/validate");
+const platformRoutes = require("./routes/platformFetch");
+const addPlatformRoutes = require("./routes/addPlatform");
 
 dotenv.config();
 
@@ -26,6 +28,8 @@ app.use(express.json());
 //routes
 app.use("/api/users", userRoutes);
 app.use("/api/validate", validateRoutes);
+app.use("/api/fetch", platformRoutes);
+app.use("/api/add", addPlatformRoutes);
 
 
 app.listen(PORT, () => {
